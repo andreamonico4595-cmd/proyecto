@@ -1,0 +1,95 @@
+import React from "react";
+
+function App() {
+
+  const sprint1 = [
+    "Creación del proyecto con React",
+    "Estructuración de carpetas",
+    "Desarrollo de la interfaz básica",
+    "Implementación de componentes iniciales"
+  ];
+
+  const sprint2 = [
+    "Creación de componentes reutilizables",
+    "Implementación de rutas con React Router",
+    "Diseño de formularios",
+    "Manejo básico de datos"
+  ];
+
+  const sprint3 = [
+    "Validación de formularios",
+    "Mejora del diseño (UI)",
+    "Organización del código",
+    "Conexión con datos (API o mock)"
+  ];
+
+  const ajustes = [
+    "Reestructuración del código",
+    "Corrección de errores",
+    "Mejora del diseño",
+    "Optimización del sistema",
+    "Cambios según retroalimentación"
+  ];
+
+  return (
+    <div style={{ padding: "20px" }}>
+      <h1>Reporte de Avances de Sprint</h1>
+
+      <h2>Introducción</h2>
+      <p>
+        Este proyecto se desarrolló con la metodología SCRUM, organizando el
+        trabajo en Sprints para avanzar progresivamente en la construcción de
+        un sistema web con React.
+      </p>
+
+      <h2>Sprint 1</h2>
+      <ul>
+        {sprint1.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+      <p><b>Resultado:</b> Base funcional del sistema.</p>
+
+      <h2>Sprint 2</h2>
+      <ul>
+        {sprint2.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+      <p><b>Resultado:</b> Mayor interacción y navegación.</p>
+
+      <h2>Sprint 3</h2>
+      <ul>
+        {sprint3.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+      <p><b>Resultado:</b> Sistema más completo y estructurado.</p>
+
+      <h2>Ajustes realizados</h2>
+      <ul>
+        {ajustes.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+
+      <h2>Repositorio en GitHub</h2>
+      <a href="https://github.com/andreamonico4595-cmd/proyecto.git" target="_blank">
+        Ver proyecto
+      </a>
+
+      <h2>Conclusión</h2>
+      <p>
+        El uso de Sprints permitió organizar el trabajo de forma eficiente,
+        logrando avances progresivos y mejorando el sistema con base en la
+        retroalimentación recibida.
+      </p>
+
+      <button onClick={() => alert("Reporte revisado")}>
+        Revisar avance
+      </button>
+    </div>
+  );
+}
+
+export default App;
