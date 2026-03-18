@@ -1,0 +1,72 @@
+import React from "react";
+
+function App() {
+
+  // Roles del equipo
+  const roles = [
+    { nombre: "Andrea Monico", rol: "Desarrollador" },
+    { nombre: "Compañero 1", rol: "Product Owner" },
+    { nombre: "Compañero 2", rol: "Scrum Master" }
+  ];
+
+  // Reuniones
+  const reuniones = [
+    {
+      dia: "Lunes",
+      actividad: "Revisión del backlog y planificación del sprint"
+    },
+    {
+      dia: "Miércoles",
+      actividad: "Revisión del avance y solución de problemas"
+    },
+    {
+      dia: "Viernes",
+      actividad: "Presentación de avances y ajustes"
+    }
+  ];
+
+  // Cambios
+  const cambios = [
+    "Se reorganizaron prioridades",
+    "Se dividieron tareas grandes",
+    "Se agregó mejora de interfaz",
+    "Se eliminaron tareas innecesarias"
+  ];
+
+  return (
+    <div>
+      <h1>Proyecto SCRUM</h1>
+
+      <h2>Roles del equipo</h2>
+      <ul>
+        {roles.map((item, index) => (
+          <li key={index}>
+            {item.nombre} - {item.rol}
+          </li>
+        ))}
+      </ul>
+
+      <h2>Reuniones</h2>
+      <ul>
+        {reuniones.map((item, index) => (
+          <li key={index}>
+            {item.dia}: {item.actividad}
+          </li>
+        ))}
+      </ul>
+
+      <h2>Cambios en el backlog</h2>
+      <ul>
+        {cambios.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+
+      <button onClick={() => alert("Avance registrado")}>
+        Ver avance
+      </button>
+    </div>
+  );
+}
+
+export default App;
